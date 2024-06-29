@@ -88,26 +88,6 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="bg-gray-600 text-white py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold">株式会社日本住宅研究社</h1>
-          <nav className="flex items-center space-x-4">
-            <a href="#" className="hover:text-gray-300">
-              事業内容
-            </a>
-            <a href="#" className="hover:text-gray-300">
-              会社概要
-            </a>
-            <a
-              href="#"
-              className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full"
-            >
-              お問い合わせ・ご相談
-            </a>
-          </nav>
-        </div>
-      </header>
-
       <main className="font-light">
         <div className="mx-4 md:mx-20 my-10 md:my-20">
           <h2 className="text-2xl text-blue-500 mb-10 mt-10 md:mt-20 text-center">
