@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.1",
+    "@heroicons/react": "^2.1.4",
     "@nextui-org/spacer": "^2.0.29",
     "@types/cors": "^2.8.17",
     "autoprefixer": "^10.4.19",

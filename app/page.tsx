@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="bg-gray-600 text-white py-4">
+      {/* <header className="bg-gray-600 text-white py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">株式会社日本住宅研究社</h1>
           <nav className="flex items-center space-x-4">
@@ -29,7 +29,7 @@ export default function Home() {
             </a>
           </nav>
         </div>
-      </header>
+      </header> */}
 
       <main className="container mx-auto px-4 py-8">
         <div className="relative h-96 mb-8">
@@ -99,11 +99,11 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="bg-gray-800 text-white py-4 mt-8">
+      {/* <footer className="bg-gray-800 text-white py-4 mt-8">
         <div className="container mx-auto px-4 text-center">
           © 2024 株式会社日本住宅研究社. All rights reserved.
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
