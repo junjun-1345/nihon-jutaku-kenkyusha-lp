@@ -14,6 +14,8 @@ export async function POST(request: NextRequest) {
       selectedPrograms,
     } = await request.json();
 
+    console.log(process.env.MAILUSER, process.env.MAILPASSWORD);
+
     const transporter = nodemailer.createTransport({
       pool: true,
       host: "mail1023.onamae.ne.jp",
