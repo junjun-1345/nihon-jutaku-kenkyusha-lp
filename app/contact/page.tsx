@@ -197,13 +197,15 @@ export default function Contact() {
                     type="checkbox"
                     id="program1"
                     name="program1"
-                    value="プログラム1"
+                    value="社会福祉DX人材育成研修プログラム 導入編"
                     className="w-4 h-4"
-                    checked={formData.selectedPrograms.includes("プログラム1")}
+                    checked={formData.selectedPrograms.includes(
+                      "社会福祉DX人材育成研修プログラム 導入編"
+                    )}
                     onChange={handleProgramChange}
                   />
                   <label htmlFor="program1" className="ml-2">
-                    プログラム1
+                    社会福祉DX人材育成研修プログラム 導入編
                   </label>
                 </div>
                 <div>
@@ -211,13 +213,15 @@ export default function Contact() {
                     type="checkbox"
                     id="program2"
                     name="program2"
-                    value="プログラム2"
+                    value="社会福祉DX人材育成研修プログラム　応用編"
                     className="w-4 h-4"
-                    checked={formData.selectedPrograms.includes("プログラム2")}
+                    checked={formData.selectedPrograms.includes(
+                      "社会福祉DX人材育成研修プログラム　応用編"
+                    )}
                     onChange={handleProgramChange}
                   />
                   <label htmlFor="program2" className="ml-2">
-                    プログラム2
+                    社会福祉DX人材育成研修プログラム　応用編
                   </label>
                 </div>
                 <div>
@@ -225,13 +229,47 @@ export default function Contact() {
                     type="checkbox"
                     id="program3"
                     name="program3"
-                    value="プログラム3"
+                    value="社会福祉DX人材育成研修プログラム　発展編"
                     className="w-4 h-4"
-                    checked={formData.selectedPrograms.includes("プログラム3")}
+                    checked={formData.selectedPrograms.includes(
+                      "社会福祉DX人材育成研修プログラム　発展編"
+                    )}
                     onChange={handleProgramChange}
                   />
                   <label htmlFor="program3" className="ml-2">
-                    プログラム3
+                    社会福祉DX人材育成研修プログラム　発展編
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="program4"
+                    name="program4"
+                    value="メタバースとAI実践研修 - 基礎から業務応用まで"
+                    className="w-4 h-4"
+                    checked={formData.selectedPrograms.includes(
+                      "メタバースとAI実践研修 - 基礎から業務応用まで"
+                    )}
+                    onChange={handleProgramChange}
+                  />
+                  <label htmlFor="program4" className="ml-2">
+                    メタバースとAI実践研修 - 基礎から業務応用まで
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    id="program5"
+                    name="program5"
+                    value="AI&BI導入で差をつける！超実践型DX講座編"
+                    className="w-4 h-4"
+                    checked={formData.selectedPrograms.includes(
+                      "AI&BI導入で差をつける！超実践型DX講座編"
+                    )}
+                    onChange={handleProgramChange}
+                  />
+                  <label htmlFor="program5" className="ml-2">
+                    AI&BI導入で差をつける！超実践型DX講座編
                   </label>
                 </div>
               </div>
