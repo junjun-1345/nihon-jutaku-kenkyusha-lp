@@ -3,6 +3,7 @@
 import Image from "next/image";
 import AppButton from "@/components/button";
 import { Spacer } from "@nextui-org/spacer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -93,7 +94,9 @@ export default function Home() {
       <Spacer y={10} />
 
       <div className="flex justify-center">
-        <AppButton>コンサルティング/研修について相談する</AppButton>
+        <AppButton>
+          <Link href={"/contact"}>コンサルティング/研修について相談する</Link>
+        </AppButton>
       </div>
 
       <Spacer y={20} />
@@ -130,7 +133,9 @@ export default function Home() {
         <Spacer y={8} />
 
         <div className="flex justify-end">
-          <AppButton>さらに詳しく　→</AppButton>
+          <AppButton>
+            <Link href={"/program"}>さらに詳しく　→</Link>
+          </AppButton>
         </div>
       </section>
     </main>
