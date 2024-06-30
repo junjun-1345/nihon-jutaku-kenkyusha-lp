@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      lineHeight: {
+        relaxed: "1.75", // デフォルトの行間を設定
+      },
+      letterSpacing: {
+        wide: "0.1em", // デフォルトの文字間隔を設定
+      },
       colors: {
         primary: "#4b91b8",
         secondary: "#4B91B8",
