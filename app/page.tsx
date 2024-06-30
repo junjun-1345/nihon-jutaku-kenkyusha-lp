@@ -15,6 +15,7 @@ export default function Home() {
         <div className="grid grid-cols-4 gap-8">
           <Link href="/contact">コンタクト</Link>
           <Link href="/consulting-training">コンサルティング | 研修</Link>
+          <Link href="/program">プログラミング</Link>
           <div className="bg-red-500">大野</div>
         </div>
       </main>
