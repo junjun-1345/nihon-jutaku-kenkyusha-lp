@@ -15,16 +15,19 @@ export async function POST(request: NextRequest) {
     } = await request.json();
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      pool: true,
+      host: "mail1023.onamae.ne.jp",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.GMAILUSER,
-        pass: process.env.GMAILPASSWORD,
+        user: process.env.MAILUSER,
+        pass: process.env.MAILPASSWORD,
       },
     });
 
     // メールの内容を設定
     const userMailOptions = {
-      from: process.env.GMAILUSER,
+      from: process.env.MAILUSER,
       to: email,
       subject: "株式会社日本住宅研究社　お問い合わせ",
       text: `${name}様\n\nお問い合わせありがとうございました。\n\n返信までしばらくお待ちください。\n\n助成金活用: ${
@@ -37,8 +40,8 @@ export async function POST(request: NextRequest) {
     };
 
     const hostMailOptions = {
-      from: process.env.GMAILUSER,
-      to: process.env.GMAILUSER, // 自分のメールアドレスに送信
+      from: process.env.MAILUSER,
+      to: process.env.HOSTEMAIL, // 自分のメールアドレスに送信
       subject: `株式会社日本住宅研究社　お問い合わせ:`,
       text: `名前: ${name}\n会社名: ${company}\nメール: ${email}\n電話番号: ${phone}\n\n助成金活用: ${
         grantUsage ? "はい" : "いいえ"
