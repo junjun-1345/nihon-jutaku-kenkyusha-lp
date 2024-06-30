@@ -25,6 +25,8 @@ export async function POST(request: NextRequest) {
         user: process.env.MAILUSER,
         pass: process.env.MAILPASSWORD,
       },
+      logger: true,
+      debug: true,
     });
 
     // メールの内容を設定
