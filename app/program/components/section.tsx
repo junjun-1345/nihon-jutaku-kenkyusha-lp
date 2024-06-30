@@ -23,9 +23,9 @@ const InfoSection: React.FC<InfoSectionProps> = ({
 }) => {
   return (
     <>
-      <div className="bg-blue-500 text-white p-4 flex justify-between items-center w-full md:w-3/4 rounded-t-md">
-        <h2 className="text-lg">{title}</h2>
-        <span className="bg-white text-blue-500 py-1 px-3 rounded-full">
+      <div className="bg-blue-500 text-white p-4 flex flex-col sm:flex-row justify-between items-center w-full md:w-3/4 rounded-t-md">
+        <h2 className="text-lg text-center sm:text-left">{title}</h2>
+        <span className="bg-white text-blue-500 py-1 px-3 rounded-full mt-2 sm:mt-0">
           {label}
         </span>
       </div>
