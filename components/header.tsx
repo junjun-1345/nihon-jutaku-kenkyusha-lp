@@ -22,7 +22,7 @@ export default function Header() {
           </h1>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-light　">
             <li className="list-none">
-              <Link href="/business" className="hover:text-blue-300">
+              <Link href="/consulting-training" className="hover:text-blue-300">
                 事業内容
               </Link>
             </li>
@@ -56,7 +56,10 @@ export default function Header() {
           <nav className="md:hidden">
             <ul className="flex flex-col items-center space-y-4 text-sm font-light mt-4">
               <li>
-                <Link href="/business" className="hover:text-blue-300">
+                <Link
+                  href="/consulting-training"
+                  className="hover:text-blue-300"
+                >
                   事業内容
                 </Link>
               </li>

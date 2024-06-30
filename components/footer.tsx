@@ -9,7 +9,7 @@ export default function Footer() {
         <nav>
           <ul className="flex items-center space-x-2 sm:space-x-4 text-xs sm:text-sm font-light">
             <li>
-              <Link href="/business" className="hover:text-blue-300">
+              <Link href="/consulting-training" className="hover:text-blue-300">
                 事業内容
               </Link>
             </li>
