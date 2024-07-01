@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-scroll";
-import MaterialSymbolsExpandCircleDownOutline from "./icon";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const ScrollSection: React.FC = () => {
   return (
@@ -24,7 +26,7 @@ const ScrollSection: React.FC = () => {
               className="flex items-center cursor-pointer hover:text-blue-300 text-xl"
             >
               <span className="mr-4">
-                <MaterialSymbolsExpandCircleDownOutline />
+                <FontAwesomeIcon icon={faCircleChevronDown} />
               </span>
               {title}
             </Link>
