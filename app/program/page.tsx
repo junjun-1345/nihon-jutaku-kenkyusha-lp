@@ -8,6 +8,12 @@ import { csvData1, csvData2, csvData3, csvData4, csvData5 } from "@/data/csv";
 
 import GridSection from "./components/gridSection";
 import { data1, data2, data3, data4, data5 } from "@/data/program";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "日本住宅研究社　-社会福祉DX人材育成研修",
+  description: "日本住宅研究社の詳細情報がご確認いただけます。",
+};
 
 export default function Home() {
   return (

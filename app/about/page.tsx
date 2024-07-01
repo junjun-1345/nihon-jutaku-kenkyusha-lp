@@ -1,4 +1,10 @@
 import Head from "next/head";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "日本住宅研究社　-会社概要",
+  description: "日本住宅研究社の詳細情報がご確認いただけます。",
+};
 
 export default function Home() {
   return (

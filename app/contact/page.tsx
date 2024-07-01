@@ -4,6 +4,12 @@ import Head from "next/head";
 import React, { useState } from "react";
 import axios from "axios";
 import useErrorMessage from "@/hooks/useErrorMessage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "日本住宅研究社　-お問い合わせ・ご相談",
+  description: "日本住宅研究社の詳細情報がご確認いただけます。",
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({

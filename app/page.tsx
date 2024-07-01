@@ -3,6 +3,12 @@ import Image from "next/image";
 import AppButton from "@/components/button";
 import Link from "next/link";
 import { Spacer } from "@nextui-org/spacer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "日本住宅研究社　-AI・DX人材育成研修",
+  description: "日本住宅研究社の詳細情報がご確認いただけます。",
+};
 
 export default function Home() {
   return (
