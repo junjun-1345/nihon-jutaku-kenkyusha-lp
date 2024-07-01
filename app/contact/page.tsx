@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import useErrorMessage from "@/hooks/useErrorMessage";
 import { Metadata } from "next";
+import AppButton from "@/components/button";
+import Link from "next/link";
+import { Spacer } from "@nextui-org/spacer";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -95,7 +98,6 @@ export default function Contact() {
             <h2 className="text-2xl text-blue-500 mb-10 mt-10 md:mt-20 text-center">
               お問い合わせ・ご相談
             </h2>
-
             <form onSubmit={handleSendMail} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-1 text-sm">
@@ -278,6 +280,17 @@ export default function Contact() {
                 </div>
               )}
             </form>
+            <Spacer y={20} />
+            メールが届かない場合は、お手数ですがフォームから送信ください。
+            <Spacer y={6} />
+            <div className="flex justify-center">
+              {" "}
+              <AppButton>
+                <Link href={"https://forms.gle/qTcvsSqKhVVpcfd68"}>
+                  フォームはこちら
+                </Link>
+              </AppButton>
+            </div>
           </div>
         </div>
       </main>
