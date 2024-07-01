@@ -17,13 +17,10 @@ export async function POST(request: NextRequest) {
     console.log(process.env.MAILUSER, process.env.MAILPASSWORD);
 
     const transporter = nodemailer.createTransport({
-      pool: true,
-      host: "mail1023.onamae.ne.jp",
-      port: 465,
-      secure: true,
+      service: "gmail",
       auth: {
-        user: process.env.MAILUSER,
-        pass: process.env.MAILPASSWORD,
+        user: process.env.GMAILUSER,
+        pass: process.env.GMAILPASSWORD,
       },
       logger: true,
       debug: true,
@@ -41,7 +38,7 @@ export async function POST(request: NextRequest) {
     };
 
     const hostMailOptions = {
-      from: process.env.MAILUSER,
+      from: process.env.GMAILUSER,
       to: process.env.MAILUSER, // 自分のメールアドレスに送信
       subject: `株式会社日本住宅研究社　お問い合わせ:`,
       text: `名前: ${name}\n会社名: ${company}\nメール: ${email}\n電話番号: ${phone}
