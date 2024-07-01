@@ -2,7 +2,7 @@
 
 import { Spacer } from "@nextui-org/spacer";
 import Image from "next/image";
-import InfoSection from "./components/section";
+import InfoSection from "./components/infoSection";
 
 import {
   contentData1,
@@ -21,6 +21,7 @@ import GridSection from "./components/gridSection";
 import { data1, data2, data3, data4, data5 } from "@/data/program";
 import { Metadata } from "next";
 import Head from "next/head";
+import ScrollSection from "./components/srcollSection";
 
 export default function Home() {
   return (
@@ -88,6 +89,11 @@ export default function Home() {
           </div>
         </section>
         <Spacer y={40} />
+
+        <ScrollSection />
+
+        <Spacer y={40} />
+
         <InfoSection
           title={data1.title}
           label={data1.label}
@@ -96,6 +102,7 @@ export default function Home() {
           merits={data1.merits}
           programs={data1.programs}
           industrys={data1.industrys}
+          id={1}
         />
         <Spacer y={40} />
         {/* <GridSection data={csvData1} /> */}
@@ -110,6 +117,7 @@ export default function Home() {
           merits={data2.merits}
           programs={data2.programs}
           industrys={data2.industrys}
+          id={2}
         />
         <Spacer y={40} />
         {/* <GridSection data={csvData2} /> */}
@@ -124,6 +132,7 @@ export default function Home() {
           merits={data3.merits}
           programs={data3.programs}
           industrys={data3.industrys}
+          id={3}
         />
         <Spacer y={40} />
         {/* <GridSection data={csvData3} /> */}
@@ -138,6 +147,7 @@ export default function Home() {
           merits={data4.merits}
           programs={data4.programs}
           industrys={data4.industrys}
+          id={4}
         />
         <Spacer y={40} />
         {/* <GridSection data={csvData4} /> */}
@@ -152,6 +162,7 @@ export default function Home() {
           merits={data5.merits}
           programs={data5.programs}
           industrys={data5.industrys}
+          id={5}
         />
         <Spacer y={40} />
         {/* <GridSection data={csvData5} /> */}
