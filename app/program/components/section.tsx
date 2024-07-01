@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Spacer } from "@nextui-org/spacer";
+import AppButton from "@/components/button";
 
 interface InfoSectionProps {
   title: string;
@@ -113,7 +115,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center bg-blue-500 text-white px-4 py-6 md:px-12 relative">
+      <section className="flex flex-col md:flex-row items-center bg-blue-500 text-white px-2 py-3 md:px-6 relative">
         <div className="flex-1 z-10">
           <h2 className="text-xl md:text-2xl mb-2">好まれる業界</h2>
           <ul className="list-disc pl-4 md:pl-10 font-extralight">
@@ -123,6 +125,14 @@ const InfoSection: React.FC<InfoSectionProps> = ({
           </ul>
         </div>
       </section>
+
+      <div className="flex justify-center my-10">
+        <AppButton>
+          <Link href={"/contact"}>
+            研修に関するお問い合わせ・ご相談はこちらから
+          </Link>
+        </AppButton>
+      </div>
     </>
   );
 };
