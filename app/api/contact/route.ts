@@ -17,10 +17,7 @@ export async function POST(request: NextRequest) {
     console.log(process.env.MAILUSER, process.env.MAILPASSWORD);
 
     const transporter = nodemailer.createTransport({
-      pool: true,
-      host: "mail1023.onamae.ne.jp",
-      port: 465,
-      secure: true,
+      service: "gmail",
       auth: {
         user: process.env.MAILUSER,
         pass: process.env.MAILPASSWORD,
@@ -29,11 +26,8 @@ export async function POST(request: NextRequest) {
       debug: true,
     });
 
-    // メールの内容を設定
-    // \n\n助成金活用: ${grantUsage ? "はい" : "いいえ"}
-    // \n社会福祉プログラム: ${socialWelfareProgram ? "申し込む" : "申し込まない"}
     const userMailOptions = {
-      from: process.env.MAILUSER,
+      from: process.env.HOSTEMAIL,
       to: email,
       subject: "株式会社日本住宅研究社　お問い合わせ",
       text: `${name}様\n\nお問い合わせありがとうございました。\n\n返信までしばらくお待ちください。
@@ -43,11 +37,9 @@ export async function POST(request: NextRequest) {
       )}\n\nお問い合わせ内容:\n${message}`,
     };
 
-    // \n\n助成金活用: ${grantUsage ? "はい" : "いいえ"}
-    // \n社会福祉プログラム: ${socialWelfareProgram ? "申し込む" : "申し込まない"}
     const hostMailOptions = {
       from: process.env.MAILUSER,
-      to: process.env.MAILUSER, // 自分のメールアドレスに送信
+      to: process.env.HOSTEMAIL, // 自分のメールアドレスに送信
       subject: `株式会社日本住宅研究社　お問い合わせ:`,
       text: `名前: ${name}\n会社名: ${company}\nメール: ${email}\n電話番号: ${phone}
       \n選択されたプログラム: ${selectedPrograms.join(
