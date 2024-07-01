@@ -45,68 +45,36 @@ const Header = () => {
   );
 };
 
-const Introduction = () => {
+const Introduction: React.FC = () => {
+  const paragraphs = [
+    "日本住宅研究社は、不動産仲介事業、放課後デイサービス運営事業、保育園運営事業というそれぞれ異なる分野で事業をこれまで展開してきました。",
+    "それぞれの事業を通じて、顧客が抱える課題と向き合い解決へと導くことで、社会に貢献してきたという自負があります。",
+    "しかし、近年急速に進むデジタル化の波は私たちの事業にも大きな影響を与え始めていました。顧客のニーズはますます複雑化し従来のやり方では対応できない場面が増えてきました。",
+    "そこで、私たちは新たな挑戦を決意しました。",
+    <span key="highlight" className="text-[#FFDE00] font-bold">
+      「DX人材育成で、企業の未来を創る」
+    </span>,
+    "私たちは、これまで培ってきた不動産、福祉、教育の専門知識とデジタル技術を活用した経験を活かし企業のDX人材育成を支援するコンサルティング研修事業を開始しました。",
+    "今回の研修事業では、様々な業界の企業に対して単にデジタルツールの使い方を教えるだけでなく企業全体の業務改革を視野に入れた実践的なDX人材育成プログラムを提供します。",
+    "私たちは、企業のDX人材育成を通じて日本企業の競争力強化に貢献したいです。",
+    "そして、持続可能な社会の実現に向けて新たな価値を生み出すお手伝いをしていきたいと思っています。",
+  ];
+
   return (
     <div className="relative w-full h-auto flex justify-center items-center mt-10 md:mt-20">
-      <div className="absolute inset-0 flex justify-center items-center">
-        <div className="absolute inset-6 md:inset-32 bg-black/50 blur-3xl"></div>
-      </div>
-      <div className="relative z-10 p-8 md:p-20 mx-2 md:mx-40 bg-white rounded-lg font-light">
-        <p
-          className="text-black font-light md:text-xl leading-normal text-left"
-          style={{ fontFamily: "serif" }}
-        >
-          日本住宅研究社は、
-          <Spacer y={16} />
-          不動産仲介事業、放課後デイサービス運営事業、保育園運営事業という
-          <Spacer y={4} />
-          それぞれ異なる分野で事業をこれまで展開してきました。
-          <Spacer y={16} />
-          それぞれの事業を通じて、顧客が抱える課題と向き合い
-          <Spacer y={4} />
-          解決へと導くことで、社会に貢献してきたという自負があります。
-          <Spacer y={16} />
-          しかし、近年急速に進むデジタル化の波は
-          <Spacer y={4} />
-          私たちの事業にも大きな影響を与え始めていました。
-          <Spacer y={4} />
-          顧客のニーズはますます複雑化し
-          <Spacer y={4} />
-          従来のやり方では対応できない場面が増えてきました。
-          <Spacer y={16} />
-          そこで、私たちは新たな挑戦を決意しました。
-          <Spacer y={16} />
-          <span className="text-[#FFDE00] font-bold">
-            「DX人材育成で、企業の未来を創る」
-          </span>
-          <Spacer y={16} />
-          私たちは、これまで培ってきた不動産、福祉、教育の専門知識と
-          <Spacer y={4} />
-          デジタル技術を活用した経験を活かし
-          <Spacer y={4} />
-          企業のDX人材育成を支援する
-          <Spacer y={4} />
-          コンサルティング研修事業を開始しました。
-          <Spacer y={16} />
-          今回の研修事業では、様々な業界の企業に対して
-          <Spacer y={4} />
-          単にデジタルツールの使い方を教えるだけでなく
-          <Spacer y={4} />
-          企業全体の業務改革を視野に入れた
-          <Spacer y={4} />
-          実践的なDX人材育成プログラムを提供します。
-          <Spacer y={16} />
-          私たちは、企業のDX人材育成を通じて
-          <Spacer y={4} />
-          日本企業の競争力強化に貢献したいです。
-          <Spacer y={16} />
-          そして、持続可能な社会の実現に向けて
-          <Spacer y={4} />
-          新たな価値を生み出すお手伝いをしていきたいと思っています。
-        </p>
-        <Spacer y={32} />
+      <div className="absolute inset-0 w-full max-w-4xl mx-auto h-full bg-black/50 blur-3xl transform scale-105 origin-center"></div>
+      <div className="relative z-10 p-8 md:p-20 mx-2 md:mx-40 bg-white rounded-lg font-light max-w-4xl w-full">
+        {paragraphs.map((paragraph, index) => (
+          <p
+            key={index}
+            className="text-black font-light md:text-xl leading-normal text-left mb-8"
+            style={{ fontFamily: "serif" }}
+          >
+            {paragraph}
+          </p>
+        ))}
         <h2
-          className="text-left text-2xl md:text-4xl"
+          className="text-left text-2xl md:text-4xl mt-8"
           style={{ fontFamily: "serif" }}
         >
           株式会社日本住宅研究社
@@ -115,11 +83,10 @@ const Introduction = () => {
     </div>
   );
 };
-
 const BusinessContent: React.FC = () => {
   return (
     <div className="relative w-full h-auto flex justify-center items-center mt-10 md:mt-20 pb-40">
-      <div className="absolute inset-6 md:inset-32 bg-black/50 blur-3xl"></div>
+      <div className="absolute inset-0 w-full max-w-6xl mx-auto h-full bg-black/50 blur-3xl transform scale-105 origin-center"></div>
       <div className="relative z-10 px-6 py-12 md:px-10 md:py-12 mx-4 md:mx-8 bg-white rounded-lg w-full max-w-6xl">
         <section>
           <h2 className="text-2xl font-bold">事業内容</h2>
