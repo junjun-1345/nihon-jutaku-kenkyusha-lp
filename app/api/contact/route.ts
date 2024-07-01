@@ -17,7 +17,10 @@ export async function POST(request: NextRequest) {
     console.log(process.env.MAILUSER, process.env.MAILPASSWORD);
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      pool: true,
+      host: "mail1023.onamae.ne.jp",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.MAILUSER,
         pass: process.env.MAILPASSWORD,
