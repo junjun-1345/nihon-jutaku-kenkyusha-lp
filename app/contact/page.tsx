@@ -158,7 +158,7 @@ export default function Contact() {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="grantUsage" className="block mb-1 text-sm">
                 助成金　活用したいですか？
               </label>
@@ -170,13 +170,13 @@ export default function Contact() {
                 checked={formData.grantUsage}
                 onChange={handleChange}
               />
-            </div>
+            </div> */}
             <div>
               <label
                 htmlFor="socialWelfareProgram"
                 className="block mb-1 text-sm"
               >
-                社会福祉プログラムに申し込む
+                社会福祉DX人材育成研修の受講を検討している
               </label>
               <input
                 type="checkbox"
@@ -189,7 +189,7 @@ export default function Contact() {
             </div>
             <div>
               <label className="block mb-1 text-sm">
-                プログラムの内容を選択してください：
+                受講を検討しているプログラムの内容を選択してください：
               </label>
               <div className="flex flex-col space-y-2">
                 <div>
