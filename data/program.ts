@@ -38,7 +38,7 @@ export const data1 = {
         "報告書やプレゼン資料の作成技術を磨き、実践演習で実務での即戦力を身につけます。",
     },
   ],
-  industrys: ["全業種"],
+  industrys: ["全業界対応"],
 };
 
 export const data2 = {
@@ -81,7 +81,7 @@ export const data2 = {
         "報告書やプレゼン資料の作成技術を磨き、実践演習で実務での即戦力を身につけます。",
     },
   ],
-  industrys: ["全業種"],
+  industrys: ["全業界対応"],
 };
 
 export const data3 = {
@@ -124,7 +124,7 @@ export const data3 = {
         "報告書やプレゼン資料の作成技術を磨き、実践演習で実務での即戦力を身につけます。",
     },
   ],
-  industrys: ["全業種"],
+  industrys: ["全業界対応"],
 };
 
 export const data4 = {
