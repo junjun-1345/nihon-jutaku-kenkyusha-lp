@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     // \n社会福祉プログラム: ${socialWelfareProgram ? "申し込む" : "申し込まない"}
     const hostMailOptions = {
       from: process.env.MAILUSER,
-      to: process.env.HOSTEMAIL, // 自分のメールアドレスに送信
+      to: process.env.MAILUSER, // 自分のメールアドレスに送信
       subject: `株式会社日本住宅研究社　お問い合わせ:`,
       text: `名前: ${name}\n会社名: ${company}\nメール: ${email}\n電話番号: ${phone}
       \n選択されたプログラム: ${selectedPrograms.join(
