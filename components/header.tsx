@@ -22,8 +22,14 @@ export default function Header() {
           </h1>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-light　">
             <li className="list-none">
-              <Link href="/consulting-training" className="hover:text-blue-300">
-                事業内容
+              <Link href="/program" className="hover:text-blue-300">
+                トップ
+              </Link>
+            </li>
+            <VerticalLine height="h-8" color="bg-white" className="mx-4" />
+            <li className="list-none">
+              <Link href="/program" className="hover:text-blue-300">
+                研修内容
               </Link>
             </li>
             <VerticalLine height="h-8" color="bg-white" className="mx-4" />
