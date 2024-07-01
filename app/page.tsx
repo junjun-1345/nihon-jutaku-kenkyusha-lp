@@ -37,9 +37,9 @@ const Header = () => {
       </div>
       <div className="absolute inset-0 bg-[#4b91b8b2]" />
       <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 font-semibold text-white text-center tracking-wide leading-snug text-2xl md:text-4xl lg:text-6xl">
-        AI・DX人材育成研修
+        すべての人に
         <br />
-        取り入れてみませんか？
+        AI・DXの研修を
       </div>
       <div className="absolute inset-x-0 top-5 md:top-10 lg:top-14 font-semibold text-white text-center tracking-normal leading-snug text-xl md:text-2xl lg:text-3xl">
         株式会社日本住宅研究社
