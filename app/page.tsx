@@ -3,10 +3,15 @@ import Image from "next/image";
 import AppButton from "@/components/button";
 import Link from "next/link";
 import { Spacer } from "@nextui-org/spacer";
+import { Metadata } from "next";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="relative w-full bg-blue">
+      <Head>
+        <title>TOP | 株式会社日本住宅研究社</title>
+      </Head>
       <Header />
       <Introduction />
       <SlantedImage />

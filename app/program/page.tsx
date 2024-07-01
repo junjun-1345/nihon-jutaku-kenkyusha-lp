@@ -8,10 +8,15 @@ import { csvData1, csvData2, csvData3, csvData4, csvData5 } from "@/data/csv";
 
 import GridSection from "./components/gridSection";
 import { data1, data2, data3, data4, data5 } from "@/data/program";
+import { Metadata } from "next";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main>
+      <Head>
+        <title>社会福祉DX人材育成研修 | 株式会社日本住宅研究社</title>
+      </Head>
       <div className="max-w-full mx-auto">
         <div className="relative w-full">
           <Image

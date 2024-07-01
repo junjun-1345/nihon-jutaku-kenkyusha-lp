@@ -4,10 +4,15 @@ import Image from "next/image";
 import AppButton from "@/components/button";
 import { Spacer } from "@nextui-org/spacer";
 import Link from "next/link";
+import { Metadata } from "next";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main className="my-20 mx-4 sm:mx-8 md:mx-16 lg:mx-40">
+      <Head>
+        <title>コンサルティング/研修 | 株式会社日本住宅研究社</title>
+      </Head>
       <section className="">
         <h2 className="text-4xl">コンサルティング/研修</h2>
         <Spacer y={4} />
