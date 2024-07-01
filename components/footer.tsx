@@ -20,7 +20,7 @@ export default function Footer() {
             />
             <li>
               <Link href="/about" className="hover:text-blue-300">
-                企業概要
+                会社概要
               </Link>
             </li>
             <VerticalLine
