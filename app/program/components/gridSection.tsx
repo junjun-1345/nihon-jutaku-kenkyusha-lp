@@ -1,11 +1,16 @@
-import { CsvData } from "@/types";
-import React from "react";
+import { CsvData, ContentData } from "@/types";
+import React, { useState } from "react";
+import Modal from "react-modal";
 
 interface DataTableProps {
   data: CsvData[];
+  contentData: ContentData[];
 }
 
-const GridSection: React.FC<DataTableProps> = ({ data }) => {
+const GridSection: React.FC<DataTableProps> = ({ data, contentData }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<ContentData | null>(null);
+
   const processedData = data.map((row) => {
     return Object.values(row).map((cell) => (cell === "" ? null : cell));
   });
@@ -28,11 +33,22 @@ const GridSection: React.FC<DataTableProps> = ({ data }) => {
 
     const cellClass = colIndex === 2 && rowIndex % 2 !== 0 ? "bg-gray-100" : "";
 
+    const handleClick = () => {
+      const content = contentData.find((item) => item.項目 === value);
+      if (content) {
+        setModalContent(content);
+        setModalIsOpen(true);
+      }
+    };
+
     return (
       <td
         key={`${rowIndex}-${colIndex}`}
-        className={`border px-2 py-1 text-center align-middle ${cellClass}`}
+        className={`border px-4 py-2 text-center align-middle ${cellClass} ${
+          colIndex === 0 ? "cursor-pointer text-blue-600 underline" : ""
+        }`}
         rowSpan={rowSpan}
+        onClick={colIndex === 0 ? handleClick : undefined}
       >
         {value}
       </td>
@@ -42,14 +58,13 @@ const GridSection: React.FC<DataTableProps> = ({ data }) => {
   return (
     <div className="w-full overflow-x-auto">
       <div className="min-w-max">
-        <p className="text-xs text-gray-500 mb-2">スクロールして表全体を表示</p>
-        <table className="table-auto w-full border-collapse text-xs">
+        <table className="table-auto w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-200">
               {Object.keys(data[0] || {}).map((key) => (
                 <th
                   key={key}
-                  className="border px-2 py-1 text-center whitespace-nowrap"
+                  className="border px-4 py-2 text-center whitespace-nowrap"
                 >
                   {key}
                 </th>
@@ -67,6 +82,32 @@ const GridSection: React.FC<DataTableProps> = ({ data }) => {
           </tbody>
         </table>
       </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="項目の詳細"
+        className="modal"
+        overlayClassName="overlay"
+      >
+        {modalContent && (
+          <div className="p-4">
+            <h2 className="text-2xl mb-4">{modalContent.項目}</h2>
+            <p className="mb-4">{modalContent.説明}</p>
+            <ul className="list-disc list-inside">
+              {modalContent.内容.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            <button
+              onClick={() => setModalIsOpen(false)}
+              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+            >
+              閉じる
+            </button>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 };

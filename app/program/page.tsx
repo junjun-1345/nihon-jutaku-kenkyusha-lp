@@ -2,14 +2,26 @@
 
 import { Spacer } from "@nextui-org/spacer";
 import Image from "next/image";
-import InfoSection from "./components/section";
+import InfoSection from "./components/infoSection";
 
-import { csvData1, csvData2, csvData3, csvData4, csvData5 } from "@/data/csv";
+import {
+  contentData1,
+  contentData2,
+  contentData3,
+  contentData4,
+  contentData5,
+  csvData1,
+  csvData2,
+  csvData3,
+  csvData4,
+  csvData5,
+} from "@/data/csv";
 
 import GridSection from "./components/gridSection";
 import { data1, data2, data3, data4, data5 } from "@/data/program";
 import { Metadata } from "next";
 import Head from "next/head";
+import ScrollSection from "./components/srcollSection";
 
 export default function Home() {
   return (
@@ -77,6 +89,11 @@ export default function Home() {
           </div>
         </section>
         <Spacer y={40} />
+
+        <ScrollSection />
+
+        <Spacer y={40} />
+
         <InfoSection
           title={data1.title}
           label={data1.label}
@@ -85,9 +102,11 @@ export default function Home() {
           merits={data1.merits}
           programs={data1.programs}
           industrys={data1.industrys}
+          id={1}
         />
         <Spacer y={40} />
-        <GridSection data={csvData1} />
+        {/* <GridSection data={csvData1} /> */}
+        <GridSection data={csvData1} contentData={contentData1} />
 
         <Spacer y={40} />
         <InfoSection
@@ -98,9 +117,11 @@ export default function Home() {
           merits={data2.merits}
           programs={data2.programs}
           industrys={data2.industrys}
+          id={2}
         />
         <Spacer y={40} />
-        <GridSection data={csvData2} />
+        {/* <GridSection data={csvData2} /> */}
+        <GridSection data={csvData2} contentData={contentData2} />
 
         <Spacer y={40} />
         <InfoSection
@@ -111,9 +132,11 @@ export default function Home() {
           merits={data3.merits}
           programs={data3.programs}
           industrys={data3.industrys}
+          id={3}
         />
         <Spacer y={40} />
-        <GridSection data={csvData3} />
+        {/* <GridSection data={csvData3} /> */}
+        <GridSection data={csvData3} contentData={contentData3} />
 
         <Spacer y={40} />
         <InfoSection
@@ -124,9 +147,11 @@ export default function Home() {
           merits={data4.merits}
           programs={data4.programs}
           industrys={data4.industrys}
+          id={4}
         />
         <Spacer y={40} />
-        <GridSection data={csvData4} />
+        {/* <GridSection data={csvData4} /> */}
+        <GridSection data={csvData4} contentData={contentData4} />
 
         <Spacer y={40} />
         <InfoSection
@@ -137,9 +162,11 @@ export default function Home() {
           merits={data5.merits}
           programs={data5.programs}
           industrys={data5.industrys}
+          id={5}
         />
         <Spacer y={40} />
-        <GridSection data={csvData5} />
+        {/* <GridSection data={csvData5} /> */}
+        <GridSection data={csvData5} contentData={contentData5} />
       </div>
     </main>
   );
