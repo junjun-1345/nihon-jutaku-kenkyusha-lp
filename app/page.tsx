@@ -118,100 +118,61 @@ const Introduction = () => {
 
 const BusinessContent: React.FC = () => {
   return (
-    <div className="relative w-full h-auto flex justify-center items-center mt-10 md:mt-20">
+    <div className="relative w-full h-auto flex justify-center items-center mt-10 md:mt-20 pb-40">
       <div className="absolute inset-6 md:inset-32 bg-black/50 blur-3xl"></div>
       <div className="relative z-10 px-6 py-12 md:px-10 md:py-12 mx-4 md:mx-8 bg-white rounded-lg w-full max-w-6xl">
-        <Section
-          title="事業内容"
-          subtitle="コンサルティング/研修"
-          content={
-            <>
-              当社のコンサルティングおよび研修サービスは、長年にわたる保育事業、介護事業、不動産仲介事業で培った豊富な経験とノウハウを基に展開しています。
-              <br />
-              <br />
-              これらの事業を通じて学んだ運営管理のベストプラクティスや顧客対応の技術を展開しています。企業や組織の成長と発展を支援する研修プログラムを提供します。
-              <br />
-              <br />
-              また業界の最前線で活躍するための必要な実践的なスキルと知識を養うことを目的とした当社の研修は、参加者が現場で即座に活かせる内容を含みます。
-              <br />
-              <br />
-              経験豊富なトレーナー陣が、実践的なケーススタディや役立つツールを活用したトレーニングを通じて、参加者の能力向上と組織の成果向上をサポートします。
-            </>
-          }
-          imageSrc="/top_2.jpg"
-          imageAlt="DX人材育成研修のイラスト"
-          linkHref="/consulting-training"
-          linkText="さらに詳しく　→"
-        />
-        <Spacer y={16} />
-        <Section
-          title="会社概要"
-          content="株式会社日本住宅研究社は、神奈川県大和市を拠点とし、放課後等デイサービス、保育園運営、不動産仲介、そしてコンサルティング/研修事業を行っております。"
-          imageSrc="/top_3.jpg"
-          imageAlt="DX人材育成研修のイラスト"
-          linkHref="/about"
-          linkText="さらに詳しく　→"
-        />
-        <Spacer y={16} />
-        <Section
-          title="社会福祉DX人材育成研修"
-          content="デジタル技術を活用した社会福祉サービスの効率化と質の向上を図るための専門知識とスキルを身につけることができます。データ管理と分析能力の強化を通じて、利用者のニーズに応じたサービス提供を最適化します。"
-          imageSrc="/top_4.jpg"
-          imageAlt="DX人材育成研修のイラスト"
-          linkHref="/contact"
-          linkText="さらに詳しく　→"
-        />
+        <section>
+          <h2 className="text-2xl font-bold">事業内容</h2>
+          <Spacer y={4} />
+          <hr className="mb-8 border-l-8 border-black" />
+          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
+            <div className="flex-1 text-2xl">DX人材研修</div>
+            <div className="flex-1">
+              <Image
+                src="/top_2.jpg"
+                alt="DX人材育成研修のイラスト"
+                width={700}
+                height={475}
+              />
+            </div>
+          </div>
+
+          <Spacer y={8} />
+
+          <div className="flex justify-end">
+            <AppButton>
+              <Link href={"/program"}>詳しい研修内容はこちら</Link>
+            </AppButton>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold">会社概要</h2>
+          <Spacer y={4} />
+          <hr className="mb-8 border-l-8 border-black" />
+          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
+            <div className="flex-1 ">
+              株式会社日本住宅研究社は、神奈川県大和市を拠点とし、放課後等デイサービス、保育園運営、不動産仲介、そしてDX人材育成研修をしています。
+            </div>
+            <div className="flex-1">
+              <Image
+                src="/top_3.jpg"
+                alt="DX人材育成研修のイラスト"
+                width={700}
+                height={475}
+              />
+            </div>
+          </div>
+
+          <Spacer y={8} />
+
+          <div className="flex justify-end">
+            <AppButton>
+              <Link href={"/about"}>さらに詳しく　→</Link>
+            </AppButton>
+          </div>
+        </section>
       </div>
     </div>
-  );
-};
-
-interface SectionProps {
-  title: string;
-  subtitle?: string;
-  content: string | JSX.Element;
-  imageSrc: string;
-  imageAlt: string;
-  linkHref: string;
-  linkText: string;
-}
-
-const Section: React.FC<SectionProps> = ({
-  title,
-  subtitle,
-  content,
-  imageSrc,
-  imageAlt,
-  linkHref,
-  linkText,
-}) => {
-  return (
-    <section className="font-light">
-      {title && <h2 className="text-2xl">{title}</h2>}
-      <Spacer y={4} />
-      <hr className="mb-8 border-l-8 border-black" />
-      {subtitle && <h2 className="text-2xl">{subtitle}</h2>}
-      <Spacer y={16} />
-      <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="flex-1">
-          <p>{content}</p>
-        </div>
-        <div className="flex-1">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            layout="responsive"
-            width={700}
-            height={475}
-          />
-        </div>
-      </div>
-      <Spacer y={8} />
-      <div className="flex justify-end">
-        <AppButton>
-          <Link href={linkHref}>{linkText}</Link>
-        </AppButton>
-      </div>
-    </section>
   );
 };
