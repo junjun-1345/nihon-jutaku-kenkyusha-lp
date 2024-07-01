@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     });
 
     const userMailOptions = {
-      from: process.env.HOSTEMAIL,
+      from: process.env.MAILUSER,
       to: email,
       subject: "株式会社日本住宅研究社　お問い合わせ",
       text: `${name}様\n\nお問い合わせありがとうございました。\n\n返信までしばらくお待ちください。
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
 
     const hostMailOptions = {
       from: process.env.MAILUSER,
-      to: process.env.HOSTEMAIL, // 自分のメールアドレスに送信
+      to: process.env.MAILUSER, // 自分のメールアドレスに送信
       subject: `株式会社日本住宅研究社　お問い合わせ:`,
       text: `名前: ${name}\n会社名: ${company}\nメール: ${email}\n電話番号: ${phone}
       \n選択されたプログラム: ${selectedPrograms.join(
