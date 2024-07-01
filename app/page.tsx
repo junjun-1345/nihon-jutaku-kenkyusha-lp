@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <Header />
       <Introduction />
-      <SlantedImage />
+      <Spacer y={80} />
       <BusinessContent />
     </div>
   );
@@ -41,9 +41,6 @@ const Header = () => {
         <br />
         AI・DXの研修を
       </div>
-      <div className="absolute inset-x-0 top-5 md:top-10 lg:top-14 font-semibold text-white text-center tracking-normal leading-snug text-xl md:text-2xl lg:text-3xl">
-        株式会社日本住宅研究社
-      </div>
     </div>
   );
 };
@@ -51,73 +48,69 @@ const Header = () => {
 const Introduction = () => {
   return (
     <div className="relative w-full h-auto flex justify-center items-center mt-10 md:mt-20">
-      <div className="absolute inset-6 md:inset-32 bg-black/50 blur-3xl"></div>
-      <div className="relative z-10 px-4 py-8 md:px-40 md:py-20 mx-2 md:mx-40 bg-white rounded-lg font-light">
-        <p className="text-black text-base md:text-xl leading-normal text-left md:text-center">
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="absolute inset-6 md:inset-32 bg-black/50 blur-3xl"></div>
+      </div>
+      <div className="relative z-10 p-8 md:p-20 mx-2 md:mx-40 bg-white rounded-lg font-light">
+        <p
+          className="text-black font-light md:text-xl leading-normal text-left"
+          style={{ fontFamily: "serif" }}
+        >
           日本住宅研究社は、
-          <Spacer y={8} />
-          不動産仲介事業、放課後デイサービス運営事業、保育園運営事業という、
+          <Spacer y={16} />
+          不動産仲介事業、放課後デイサービス運営事業、保育園運営事業という
           <Spacer y={4} />
           それぞれ異なる分野で事業をこれまで展開してきました。
-          <Spacer y={8} />
-          それぞれの事業を通じて、顧客が抱える課題と向き合い、
+          <Spacer y={16} />
+          それぞれの事業を通じて、顧客が抱える課題と向き合い
           <Spacer y={4} />
           解決へと導くことで、社会に貢献してきたという自負があります。
-          <Spacer y={8} />
-          しかし、近年急速に進むデジタル化の波は、私たちの事業にも大きな影響を与え始めていました。
+          <Spacer y={16} />
+          しかし、近年急速に進むデジタル化の波は
           <Spacer y={4} />
-          顧客のニーズはますます複雑化し、
+          私たちの事業にも大きな影響を与え始めていました。
+          <Spacer y={4} />
+          顧客のニーズはますます複雑化し
           <Spacer y={4} />
           従来のやり方では対応できない場面が増えてきました。
-          <Spacer y={8} />
+          <Spacer y={16} />
           そこで、私たちは新たな挑戦を決意しました。
-          <Spacer y={8} />
+          <Spacer y={16} />
           <span className="text-[#FFDE00] font-bold">
             「DX人材育成で、企業の未来を創る」
           </span>
-          <Spacer y={8} />
-          私たちは、これまで培ってきた不動産、福祉、教育の専門知識と、
+          <Spacer y={16} />
+          私たちは、これまで培ってきた不動産、福祉、教育の専門知識と
           <Spacer y={4} />
-          デジタル技術を活用した経験を活かし、
+          デジタル技術を活用した経験を活かし
           <Spacer y={4} />
-          企業のDX人材育成を支援するコンサルティング研修事業を開始しました。
-          <Spacer y={8} />
-          今回の研修事業では、様々な業界の企業に対して、
+          企業のDX人材育成を支援する
           <Spacer y={4} />
-          単にデジタルツールの使い方を教えるだけでなく、
+          コンサルティング研修事業を開始しました。
+          <Spacer y={16} />
+          今回の研修事業では、様々な業界の企業に対して
           <Spacer y={4} />
-          企業全体の業務改革を視野に入れた、実践的なDX人材育成プログラムを提供します。
-          <Spacer y={8} />
-          私たちは、企業のDX人材育成を通じて、
+          単にデジタルツールの使い方を教えるだけでなく
+          <Spacer y={4} />
+          企業全体の業務改革を視野に入れた
+          <Spacer y={4} />
+          実践的なDX人材育成プログラムを提供します。
+          <Spacer y={16} />
+          私たちは、企業のDX人材育成を通じて
           <Spacer y={4} />
           日本企業の競争力強化に貢献したいです。
-          <Spacer y={8} />
-          そして、持続可能な社会の実現に向けて、
+          <Spacer y={16} />
+          そして、持続可能な社会の実現に向けて
           <Spacer y={4} />
           新たな価値を生み出すお手伝いをしていきたいと思っています。
         </p>
-        <Spacer y={8} />
-        <h2 className="text-center text-2xl md:text-4xl">
+        <Spacer y={32} />
+        <h2
+          className="text-left text-2xl md:text-4xl"
+          style={{ fontFamily: "serif" }}
+        >
           株式会社日本住宅研究社
         </h2>
-      </div>
-    </div>
-  );
-};
-
-const SlantedImage = () => {
-  return (
-    <div className="relative w-full h-0 pb-[56.25%] overflow-visible mt-10 md:mt-20">
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 md:w-2/3 max-w-3xl aspect-[16/9]">
-        <div className="w-full h-full overflow-hidden transform rotate-[10deg] shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-          <Image
-            src="/top_1.jpg"
-            alt="Slanted decorative image"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
       </div>
     </div>
   );
