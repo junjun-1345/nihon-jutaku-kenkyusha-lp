@@ -117,7 +117,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({
 
       <section className="flex flex-col md:flex-row items-center bg-blue-500 text-white px-2 py-3 md:px-6 relative">
         <div className="flex-1 z-10">
-          <h2 className="text-xl md:text-2xl mb-2">好まれる業界</h2>
+          <h2 className="text-xl md:text-2xl mb-2">おすすめの業界</h2>
           <ul className="list-disc pl-4 md:pl-10 font-extralight">
             {industrys.map((industry, index) => (
               <li key={index}>{industry}</li>
