@@ -4,7 +4,18 @@ import { Spacer } from "@nextui-org/spacer";
 import Image from "next/image";
 import InfoSection from "./components/section";
 
-import { csvData1, csvData2, csvData3, csvData4, csvData5 } from "@/data/csv";
+import {
+  contentData1,
+  contentData2,
+  contentData3,
+  contentData4,
+  contentData5,
+  csvData1,
+  csvData2,
+  csvData3,
+  csvData4,
+  csvData5,
+} from "@/data/csv";
 
 import GridSection from "./components/gridSection";
 import { data1, data2, data3, data4, data5 } from "@/data/program";
@@ -87,7 +98,8 @@ export default function Home() {
           industrys={data1.industrys}
         />
         <Spacer y={40} />
-        <GridSection data={csvData1} />
+        {/* <GridSection data={csvData1} /> */}
+        <GridSection data={csvData1} contentData={contentData1} />
 
         <Spacer y={40} />
         <InfoSection
@@ -100,7 +112,8 @@ export default function Home() {
           industrys={data2.industrys}
         />
         <Spacer y={40} />
-        <GridSection data={csvData2} />
+        {/* <GridSection data={csvData2} /> */}
+        <GridSection data={csvData2} contentData={contentData2} />
 
         <Spacer y={40} />
         <InfoSection
@@ -113,7 +126,8 @@ export default function Home() {
           industrys={data3.industrys}
         />
         <Spacer y={40} />
-        <GridSection data={csvData3} />
+        {/* <GridSection data={csvData3} /> */}
+        <GridSection data={csvData3} contentData={contentData3} />
 
         <Spacer y={40} />
         <InfoSection
@@ -126,7 +140,8 @@ export default function Home() {
           industrys={data4.industrys}
         />
         <Spacer y={40} />
-        <GridSection data={csvData4} />
+        {/* <GridSection data={csvData4} /> */}
+        <GridSection data={csvData4} contentData={contentData4} />
 
         <Spacer y={40} />
         <InfoSection
@@ -139,7 +154,8 @@ export default function Home() {
           industrys={data5.industrys}
         />
         <Spacer y={40} />
-        <GridSection data={csvData5} />
+        {/* <GridSection data={csvData5} /> */}
+        <GridSection data={csvData5} contentData={contentData5} />
       </div>
     </main>
   );
