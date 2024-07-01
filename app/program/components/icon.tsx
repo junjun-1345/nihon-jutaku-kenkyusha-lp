@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-export function MaterialSymbolsExpandCircleDownOutline(
+export default function MaterialSymbolsExpandCircleDownOutline(
   props: SVGProps<SVGSVGElement>
 ) {
   return (
