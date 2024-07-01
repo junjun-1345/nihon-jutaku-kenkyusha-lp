@@ -126,7 +126,17 @@ const BusinessContent: React.FC = () => {
           <Spacer y={4} />
           <hr className="mb-8 border-l-8 border-black" />
           <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
-            <div className="flex-1 text-2xl">DX人材研修</div>
+            <div className="flex-1 ">
+              <p className="text-2xl">DX人材研修</p>
+              <p className="mt-8">
+                DX人材とは、デジタル技術を使って企業や社会の変革を推進するスキ
+                ルを持った人々のことです。デジタル技術の知識だけでなく、ビジネ
+                スの理解やプロジェクト管理能力、問題解決力、コミュニケーション
+                能力が求められます。DX人材は、現代の急速な技術進化に対応し、企
+                業の競争力を高めるために不可欠な存在であると言えます。弊社では、
+                DX人材育成の研修事業に取り組んでいます。
+              </p>
+            </div>
             <div className="flex-1">
               <Image
                 src="/top_2.jpg"
