@@ -22,7 +22,7 @@ export default function Header() {
           </h1>
           <nav className="hidden md:flex items-center space-x-4 text-sm font-light　">
             <li className="list-none">
-              <Link href="/program" className="hover:text-blue-300">
+              <Link href="/" className="hover:text-blue-300">
                 トップ
               </Link>
             </li>
