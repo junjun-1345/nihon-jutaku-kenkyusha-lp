@@ -6,11 +6,6 @@ import axios from "axios";
 import useErrorMessage from "@/hooks/useErrorMessage";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "日本住宅研究社　-お問い合わせ・ご相談",
-  description: "日本住宅研究社の詳細情報がご確認いただけます。",
-};
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -90,7 +85,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>株式会社日本住宅研究社</title>
+        <title>お問い合わせ・ご相談 | 株式会社日本住宅研究社</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
